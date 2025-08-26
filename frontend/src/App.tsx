@@ -1,33 +1,17 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Ship, Plane, Truck } from "lucide-react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function HomePage() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Navbar */}
-      <nav className="flex items-center justify-between px-8 py-4 shadow-md bg-white">
-        <h1 className="text-2xl font-bold text-blue-600">Sea Sky Cargo</h1>
-        <div className="hidden md:flex gap-6 text-gray-700 font-medium">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <button
-          className="md:hidden text-gray-700"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          ☰
-        </button>
-      </nav>
+      <Navbar />
 
-      {/* Hero */}
+      {/* Hero Section */}
       <section
         id="home"
-        className="flex-1 flex flex-col items-center justify-center text-center px-6 bg-gradient-to-r from-blue-600 to-blue-400 text-white"
+        className="flex-1 flex flex-col items-center justify-center text-center px-6 pt-32 pb-10 bg-gradient-to-r from-blue-600 to-blue-400 text-white"
       >
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -45,7 +29,7 @@ export default function HomePage() {
         </button>
       </section>
 
-      {/* Services */}
+      {/* Services Section */}
       <section id="services" className="py-16 bg-gray-100 px-6 md:px-16">
         <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">
           Our Services
@@ -80,7 +64,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About */}
+      {/* About Section */}
       <section id="about" className="py-16 px-6 md:px-16">
         <h3 className="text-3xl font-bold text-center mb-8 text-gray-800">
           About Us
@@ -92,7 +76,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* Contact */}
+      {/* Contact Section */}
       <section id="contact" className="py-16 bg-gray-100 px-6 md:px-16">
         <h3 className="text-3xl font-bold text-center mb-8 text-gray-800">
           Contact Us
@@ -121,13 +105,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-blue-600 text-white py-6 text-center">
-        <p>
-          © {new Date().getFullYear()} Sea Sky Cargo Service. All rights
-          reserved.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
