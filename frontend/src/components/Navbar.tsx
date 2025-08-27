@@ -2,11 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo.svg";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [desktopDropdown, setDesktopDropdown] = useState(null);
-  const [mobileDropdown, setMobileDropdown] = useState(null);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
 
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   // Prevent background scroll when mobile menu is open
   useEffect(() => {
@@ -18,8 +18,11 @@ export default function Navbar() {
 
   // Close dropdown if clicked outside (desktop)
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setDesktopDropdown(null);
       }
     }
@@ -27,7 +30,11 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const links = [
+  const links: {
+    name: string;
+    href?: string;
+    children?: { name: string; href: string }[];
+  }[] = [
     { name: "About", href: "#" },
     {
       name: "Services",
@@ -136,7 +143,7 @@ export default function Navbar() {
               link.children ? (
                 <div key={i} className="w-full">
                   <button
-                    className="w-full text-left px-3 py-3 text-lg font-light text-gray-800 hover:bg-gray-200/60 hover:text-[#495cb5] rounded-lg transition flex justify-between items-center"
+                    className="w-full text-left px-3 py-3 text-lg font-normal text-gray-800 hover:bg-gray-200/60 hover:text-[#495cb5] rounded-lg transition flex justify-between items-center"
                     onClick={() =>
                       setMobileDropdown(
                         mobileDropdown === link.name ? null : link.name
@@ -144,7 +151,7 @@ export default function Navbar() {
                     }
                   >
                     {link.name}
-                    <span>{mobileDropdown === link.name ? "▲" : "▼"}</span>
+                    <span>{mobileDropdown === link.name ? "-" : "+"}</span>
                   </button>
                   {mobileDropdown === link.name && (
                     <div className="ml-4 flex flex-col">
