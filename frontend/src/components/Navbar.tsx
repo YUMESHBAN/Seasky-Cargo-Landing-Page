@@ -35,7 +35,7 @@ export default function Navbar() {
     href?: string;
     children?: { name: string; href: string }[];
   }[] = [
-    { name: "About", href: "#" },
+    { name: "About", href: "/about" },
     {
       name: "Services",
       children: [
@@ -75,7 +75,7 @@ export default function Navbar() {
             {menuOpen ? "✕" : "☰"}
           </button>
 
-          <a href="#" className="text-xl font-bold text-[#495cb5]">
+          <a href="/" className="text-xl font-bold text-[#495cb5]">
             <img src={logo} alt="Logo" className="h-10 w-auto" />
           </a>
         </div>
