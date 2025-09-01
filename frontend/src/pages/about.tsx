@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import { useState } from "react";
+import { MapPin } from "lucide-react";
 import banner from "../assets/Seaskybanner.webp";
 import truck from "../assets/truck.svg";
 import plane from "../assets/plane.svg";
@@ -286,24 +287,131 @@ export default function About() {
         )}
 
         {/* ---------- Our Location Section ---------- */}
+
         {activeTab === "location" && (
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold">Our Location</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Our head office is located in Kathmandu, Nepal with branch offices
-              and partners strategically positioned across South Asia for
-              seamless operations.
-            </p>
-            <div className="w-full h-96 rounded-xl overflow-hidden shadow">
-              <iframe
-                title="SeaSky Cargo Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.11882989748!2d85.3240!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDQzJzAyLjAiTiA4NcKwMTknMjYuNSJF!5e0!3m2!1sen!2snp!4v163532"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
+          <div className="space-y-10">
+            {/* Header */}
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold">Our Location</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Our head office is located in Kathmandu, Nepal with branch
+                offices and partners strategically positioned across South Asia
+                for seamless operations.
+              </p>
+            </div>
+
+            {/* Main Offices */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Head Office */}
+              <div className="flex items-start space-x-4">
+                <MapPin className="w-10 h-10 text-blue-600" />
+                <div>
+                  <h3 className="font-bold text-lg text-blue-700">
+                    Head Office
+                  </h3>
+                  <p className="font-semibold">
+                    SEA SKY CARGO SERVICE PVT. LTD
+                  </p>
+                  <p>Kathmandu, Nepal</p>
+                  <p>📞 +977 1 5708640</p>
+                  <p>✉️ seaskynepal@gmail.com</p>
+                </div>
+              </div>
+
+              {/* Branch Office */}
+              <div className="flex items-start space-x-4">
+                <MapPin className="w-10 h-10 text-blue-600" />
+                <div>
+                  <h3 className="font-bold text-lg text-blue-700">
+                    Branch Office in ICD Dry Port
+                  </h3>
+                  <p className="font-semibold">
+                    SEA SKY CARGO SERVICE PVT. LTD
+                  </p>
+                  <p>Biratnagar, Nepal</p>
+                  <p>📞 +977 1 9821330517</p>
+                  <p>✉️ seaskybgt@gmail.com</p>
+                </div>
+              </div>
+
+              {/* Google Map */}
+              <div className="w-full h-96 rounded-xl overflow-hidden shadow md:col-span-2">
+                <iframe
+                  title="SeaSky Cargo Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.6478495146694!2d85.32109969999999!3d27.6389572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1798aad0733f%3A0xa8faabf6834a0257!2sSea%20Sky%20Cargo%20Service%20Pvt.%20Ltd!5e1!3m2!1sen!2snp!4v1756741984030!5m2!1sen!2snp"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+
+            {/* South Asia Offices */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold">
+                Our South Asia Offices/Associates
+              </h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Example Office */}
+                {[
+                  {
+                    country: "India",
+                    city: "Mumbai",
+                    email: "seaskyindia@gmail.com",
+                  },
+                  {
+                    country: "Bhutan",
+                    city: "Thimphu",
+                    email: "seaskybhutan@gmail.com",
+                  },
+                  {
+                    country: "Bangladesh",
+                    city: "Chittagong",
+                    email: "seaskybangladesh@gmail.com",
+                  },
+                  {
+                    country: "Sri Lanka",
+                    city: "Colombo",
+                    email: "seaskysrilanka@gmail.com",
+                  },
+                  {
+                    country: "Pakistan",
+                    city: "Karachi",
+                    email: "seaskypakistan@gmail.com",
+                  },
+                  {
+                    country: "Maldives",
+                    city: "Male",
+                    email: "seaskymaldives@gmail.com",
+                  },
+                  {
+                    country: "Afghanistan",
+                    city: "Herat",
+                    email: "seaskyafghanistan@gmail.com",
+                  },
+                ].map((office) => (
+                  <div
+                    key={office.country}
+                    className="flex items-start space-x-4"
+                  >
+                    <MapPin className="w-10 h-10 text-blue-600" />
+                    <div>
+                      <h4 className="font-bold text-blue-700">
+                        {office.country}
+                      </h4>
+                      <p className="font-semibold">
+                        SEA SKY CARGO SERVICE PVT. LTD
+                      </p>
+                      <p>
+                        {office.city}, {office.country}
+                      </p>
+                      <p>✉️ {office.email}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         )}
