@@ -3,6 +3,10 @@ import { useState } from "react";
 import banner from "../assets/Seaskybanner.webp";
 import truck from "../assets/truck.svg";
 import plane from "../assets/plane.svg";
+import belief from "../assets/ourBelief.jpeg";
+import mission from "../assets/ourMission.jpeg";
+import philo from "../assets/ourPhilosophy.jpeg";
+import vision from "../assets/ourVision.jpeg";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("about");
@@ -142,31 +146,53 @@ export default function About() {
             {/* Our DNA */}
             <section>
               <h3 className="text-2xl font-semibold mb-6">Our DNA</h3>
+
               <div className="grid md:grid-cols-2 gap-6">
                 {[
                   {
-                    title: "Our Mission",
+                    title: "MISSION",
                     text: "Excellent quality and efficient services at competitive costs globally.",
+                    image: mission,
                   },
                   {
-                    title: "Our Vision",
+                    title: "VISION",
                     text: "Reshaping the future of freight and cargo transports.",
+                    image: vision,
                   },
                   {
-                    title: "Our Belief",
+                    title: "BELIEF",
                     text: "Why settle for sub-par services when we can give you the best.",
+                    image: belief,
                   },
                   {
-                    title: "Our Philosophy",
+                    title: "PHILOSOPHY",
                     text: "Constantly evolving with time to ensure our clients always get the best options irrespective of time.",
+                    image: philo,
                   },
                 ].map((card) => (
                   <div
                     key={card.title}
-                    className="bg-[#f3f4f6] rounded-xl p-6 shadow"
+                    className="relative rounded-lg overflow-hidden shadow-lg h-48 md:h-56 lg:h-64"
                   >
-                    <h4 className="font-semibold text-xl mb-2">{card.title}</h4>
-                    <p className="text-gray-700">{card.text}</p>
+                    {/* Background Image */}
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/50" />
+
+                    {/* Text Content */}
+                    <div className="relative z-10 flex flex-col justify-center h-full p-6 text-white">
+                      <h4 className="uppercase font-bold">
+                        OUR <span className="text-[#1DA1F2]">{card.title}</span>
+                      </h4>
+                      <p className="mt-2 text-sm md:text-base leading-snug">
+                        {card.text}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
