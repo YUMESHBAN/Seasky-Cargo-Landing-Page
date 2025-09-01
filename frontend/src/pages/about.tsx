@@ -7,6 +7,8 @@ import belief from "../assets/ourBelief.jpeg";
 import mission from "../assets/ourMission.jpeg";
 import philo from "../assets/ourPhilosophy.jpeg";
 import vision from "../assets/ourVision.jpeg";
+import box from "../assets/box.svg";
+import globe from "../assets/globe.svg";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("about");
@@ -202,22 +204,84 @@ export default function About() {
 
         {/* ---------- Why Us Section ---------- */}
         {activeTab === "why" && (
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold">Why Choose Us?</h2>
-            <p className="text-gray-700 leading-relaxed">
-              With decades of expertise, global reach, and reliable partners,
-              Sea Sky Cargo provides unmatched logistics services. We believe in
-              cost-effective, fast, and secure delivery solutions tailored to
-              each client’s unique needs.
-            </p>
-            <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>37+ years of logistics expertise</li>
-              <li>Strong global partnerships across South Asia</li>
-              <li>
-                Proven track record with project cargo & specialized shipments
-              </li>
-              <li>Commitment to customer satisfaction</li>
-            </ul>
+          <div className="space-y-10">
+            {/* Why Us */}
+            <div className="relative bg-white rounded-lg  p-6 overflow-hidden">
+              <h2 className="text-3xl font-bold mb-4">Why Us?</h2>
+              <ul className="list-disc pl-6 text-gray-700 space-y-2 leading-relaxed">
+                <li>
+                  Over 37+ years’ worth of knowledge and experience in the
+                  shipping and forwarding industry
+                </li>
+                <li>
+                  Competitive pricing through decades of building relationships
+                  with all the major carriers
+                </li>
+                <li>
+                  Single point of contact throughout the freight process for
+                  South Asian countries including Nepal and Bhutan
+                </li>
+                <li>Friendly and competent staff</li>
+                <li>Experts in Project Logistics</li>
+                <li>Handling of cargo of all shapes and sizes</li>
+                <li>
+                  Variety of airlines and shipping lines options to choose from
+                </li>
+                <li>Tailored door-to-door air freight quotes</li>
+                <li>Range of options to protect your cargo in transit</li>
+                <li>Beginning to end tracking for your cargo</li>
+                <li>Associate and partner in South Asia Countries</li>
+                <li>We take proper care of your cargo</li>
+              </ul>
+
+              {/* Decorative Image Bottom Right */}
+              <img
+                src={globe}
+                alt="Why Us"
+                className="absolute bottom-5 right-10 w-40 h-40 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain opacity-90"
+              />
+            </div>
+
+            {/* Our Commitment */}
+            <div className="relative bg-white rounded  overflow-hidden">
+              <h2 className="text-3xl font-bold mb-4">Our Commitment</h2>
+              <p className="text-gray-700 leading-relaxed max-w-3xl">
+                SEA SKY CARGO SERVICE has a deep commitment to the work we do
+                and a desire to excel. We use our experienced staff’s talents to
+                continuously improve. We love the challenges of the industry and
+                the equipment that comes with it. We are willing to take on
+                tremendous challenges. Our desire is to achieve things that
+                nobody believes to be possible. For us, it is not just about
+                accepting the challenge, but about delivering the desired
+                results. We go the extra mile and then the extra inch. Safety is
+                our top priority. We work with integrity, provide clear feedback
+                and recognize results. We care about our results and the way in
+                which we achieve them.
+              </p>
+              <p className="text-gray-700 leading-relaxed mt-4 max-w-3xl">
+                We set international standards and drive development. Each of us
+                has specific responsibilities and must stand for our work.
+                Jointly, we are responsible for the sustainable future of our
+                company and for meeting legal, industry, and international
+                standards. We are honest. We all step up and take
+                responsibility. Our customers demand excellent performance and
+                so do we. We believe this can only be achieved through team
+                effort, when we all take an active role in the team and
+                contribute our best. In a team, diversity drives performance;
+                people build on each other’s strengths and step up to compensate
+                shortcomings. We welcome people into our team, look out for one
+                another, speak honestly to each other, and work together with
+                integrity and trust. Our strength is the team of SEA SKY CARGO
+                SERVICE.
+              </p>
+
+              {/* Box */}
+              <img
+                src={box}
+                alt="Our commitment"
+                className="absolute bottom-0 right-0 w-24 h-24 md:w-40 md:h-40 lg:w-80 lg:h-80 object-contain opacity-90"
+              />
+            </div>
           </div>
         )}
 
