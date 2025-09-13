@@ -3,6 +3,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./pages/about";
 import Home from "./pages/home";
+import AirFreight from "./pages/services/Airfreight";
+import SeaFreight from "./pages/services/Seafreight";
+import LandTransport from "./pages/services/Landtransport";
 
 export default function App() {
   return (
@@ -17,6 +20,12 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} /> {/* Default Home */}
             <Route path="/about" element={<About />} /> {/* About Page */}
+            <Route path="/services/air-freight" element={<AirFreight />} />
+            <Route path="/services/sea-freight" element={<SeaFreight />} />
+            <Route
+              path="/services/land-transport"
+              element={<LandTransport />}
+            />
           </Routes>
         </main>
 
