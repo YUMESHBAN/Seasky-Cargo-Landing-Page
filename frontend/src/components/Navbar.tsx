@@ -47,12 +47,18 @@ export default function Navbar() {
     {
       name: "Resources",
       children: [
-        { name: "Blog", href: "#" },
-        { name: "Case Studies", href: "#" },
-        { name: "FAQs", href: "#" },
+        {
+          name: "INCOTERMS",
+          href: "/resources/incoterms",
+        },
+        {
+          name: "Air Freight Containers",
+          href: "/resources/airfreightcontainer",
+        },
+        { name: "Container Sizes", href: "/resources/containersize" },
       ],
     },
-    { name: "CSR", href: "#" },
+    { name: "CSR", href: "/csr" },
     { name: "Career", href: "#" },
     { name: "Gallery", href: "#" },
     { name: "Blogs", href: "#" },

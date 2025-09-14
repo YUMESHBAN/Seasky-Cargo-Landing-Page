@@ -6,6 +6,9 @@ import Home from "./pages/home";
 import AirFreight from "./pages/services/Airfreight";
 import SeaFreight from "./pages/services/Seafreight";
 import LandTransport from "./pages/services/Landtransport";
+import Incoterms from "./pages/resources/incoterms";
+import Containersize from "./pages/resources/containersize";
+import AirContainer from "./pages/resources/airfreightcontainer";
 
 export default function App() {
   return (
@@ -25,6 +28,15 @@ export default function App() {
             <Route
               path="/services/land-transport"
               element={<LandTransport />}
+            />
+            <Route path="/resources/incoterms" element={<Incoterms />} />
+            <Route
+              path="/resources/containersize"
+              element={<Containersize />}
+            />
+            <Route
+              path="/resources/airfreightcontainer"
+              element={<AirContainer />}
             />
           </Routes>
         </main>
