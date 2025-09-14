@@ -1,6 +1,9 @@
 import { useState } from "react";
-import sea from "../../assets/water1.png";
+import land from "../../assets/land.png";
 import quote from "../../assets/getQuote.svg";
+import bhutan from "../../assets/bhutan truck.jpg";
+import hilltruck from "../../assets/hill nepal.jpg";
+import nepaltruck from "../../assets/truck.jpg";
 
 export default function AirFreight() {
   const [form, setForm] = useState({
@@ -24,20 +27,24 @@ export default function AirFreight() {
   };
 
   return (
-    <div className="min-h-screen">
-      <div className="relative h-90 md:h-96 lg:h-[500px] overflow-hidden">
+    <div>
+      {/* ---------- Hero Section ---------- */}
+      <div className="relative h-80 md:h-96 lg:h-[500px] overflow-hidden">
+        {/* Background Image */}
         <img
-          src={sea}
-          alt="Air Freight"
+          src={land}
+          alt="Land Freight"
           className="absolute inset-0 w-full h-full object-cover object-center lg:object-[center_50%] -z-10"
           loading="lazy"
         />
 
+        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
+        {/* Title at bottom-right */}
         <div className="absolute left-10 bottom-10 inset-x-50 lg:top-3/4 lg:-translate-y-3/4 text-left">
           <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg leading-tight">
-            Ocean/Sea Freight
+            Land Freight
           </h1>
           <h1 className="text-4xl md:text-5xl font-bold text-blue-500 drop-shadow-lg leading-tight">
             Services
@@ -51,74 +58,135 @@ export default function AirFreight() {
         <div className="md:col-span-2 space-y-8">
           <div>
             <h2 className="text-3xl font-bold mb-4">
-              Ocean/Sea Freight with SeaSky
+              Road Freight (Kolkata-Kathmandu)
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              Sea freight, is the dominant method for shipping goods globally,
-              accounting for roughly 90% of international shipments.
+              We ensure reliable, efficient, and competitive ground haulage from
+              Kolkata or Haldia port to any point in Nepal.
               <br />
               <br />
-              With such a large section of the industry, third-party freight
-              forwarders play a huge role in optimizing your freight experience.
+              We proudly boast our portfolio of 45 self-owned vehicles,
+              including:
               <br />
               <br />
-              We, as freight forwarders, ensure proper handling, loading, and
-              delivery of your goods, offering trusted assistance in the entire
-              shipping process on sea freight.
+              <ol className="list-decimal pl-6 text-gray-700 space-y-1 leading-relaxed">
+                <li>9 VOLVOS Low Bed Trailers (capacity up to 100 tons)</li>
+                <li>
+                  20 VOLVOS Semi Low Bed/High Bed Trailers (capacity 80 tons)
+                </li>
+                <li>8 10-Wheeler Trucks (capacity 25 tons)</li>
+                <li>8 6-Wheeler Punjab Body Trucks (capacity 10 tons)</li>
+              </ol>
             </p>
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold mb-4">Why Us?</h2>
+            <h2 className="text-3xl font-bold mb-4">Domestic Transport</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Shipping with Sea Sky Cargo Service ensures hassle-free global
-              merchandise transport. From purchase order to delivery, our
-              experienced team manages all details, negotiating contracts,
-              booking shipments, and preparing export documentation.
+              Sea Sky Cargo Service also provides domestic transport i.e. the
+              movement of goods within Nepal and Bhutan either by Air or Land.
               <br />
               <br />
-              Whether it be Full Container Load (FCL) or Less than Container
-              Load (LCL), we secure the best freight rates using various lines
-              and Non-Vessel Operating Common Carriers (NVOCCs).
+              Domestic transport is the movement of goods within the national
+              borders of a country. The first, and most common mode of
+              transportation in logistics, is road. From walking to horses to
+              wagons to bikes to cars to trucks, road transportation has been
+              around longer than mode and is utilized the most of any mode in
+              logistics.
               <br />
               <br />
-              Our services include consistent road haulage to and from the ocean
-              gateway Kolkata/Haldia, FCL and LCL consolidation worldwide,
-              competitive rates via direct carriers and NVOCC, negotiable Bill
-              of Lading, worldwide door-to-door service, ATA CARNET,
-              time-definite haulage, meticulous documentation, and proof of
-              delivery.
+              Road transport activity in Nepal and Bhutan is the main means of
+              communication with remote areas, both for passenger and freight
+              transport. The development of the country involves the
+              displacement of food products, construction and many others to the
+              districts and small villages, where only road transport makes it
+              possible.
             </p>
-            <p className=" text-blue-700 font-bold">
-              We are committed to delivering a top-tier air freight service with
-              competitive rates, prioritizing exceptional customer service.
+            <p className="text-xl text-blue-700 font-bold">
+              Sea Sky Cargo service began its activity in the 90’s, Transporting
+              mainly Food Products
+              <br />
+              <br />
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Over the following years, we have been gaining ground in the
+              domestic market, through the experience and perseverance in
+              fulfilling our obligations and the full satisfaction of our
+              customers.
+              <br />
+              <br />
+              In the 2000’s, we were able to organize many fleets, starting to
+              operate throughout the country and still fulfilling contracts with
+              some international Organizations, INGO, NGO and some foreign
+              companies working in Hydro Power. Construction of roads irrigation
+              projects, Airport construction etc.
+              <br />
+              <br />
+              We have a control of varied fleet for the transport of various
+              goods, as follows:
+            </p>
+            <ul className="list-disc pl-6 text-gray-700 space-y-1 leading-relaxed">
+              <li>Solid Load/Cargo</li>
+              <li>Net Load/Cargo</li>
+              <li>Dumpers/Tippers</li>
+              <li>Low charge (Low Bed)</li>
+              <li>Crane</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              The transport system has not been developed well in Nepal and
+              Bhutan due to their mountainous topography, landlocked position,
+              backward technology and poor economic condition.
+              <br />
+              <br />
+              However the transport department at SEA SKY CARGO SERVICE can
+              handle specialist products such as hazardous, chilled or frozen
+              (temperature controlled) or out of gauge movements etc.
+            </p>
+            <p className="text-xl text-blue-700 font-bold">
+              Whether the Cargo comes by Sea, Air or Rail, Sea Sky Cargo Service
+              is equipped to provide competitive road haulage services in Nepal.
+              <br />
+              <br />
             </p>
           </div>
 
-          {/* Info Box */}
-          <div className="bg-blue-100 p-6 rounded-xl shadow">
-            <h3 className="font-bold text-lg mb-3">Types of Air Cargo:</h3>
-            <p className="mb-2">
-              <strong>General Cargo:</strong>
-              <br />
-              Household goods, office equipment, sports equipment, garments,
-              textiles, and high-value goods like electronics, jewelry, and
-              pharmaceuticals.
-              <br />
-              <br />
-            </p>
-            <p>
-              <strong>Special Cargo:</strong> <br />
-              Items requiring special handling such as hazardous goods, fragile
-              cargo, perishables, and oversized shipments.
-              <br />
-              <br />
-              This may be because of the value and the ease with which
-              attractive articles can be removed (e.g. small items easily
-              pilfered) or consumed (eg. liquor). and mainly includes Hazardous
-              Goods, Fragile Cargo, Outsized Cargo, Perishable Cargo, and
-              High-Value Cargo.
-            </p>
+          {/* Image Grid Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mt-10">
+            <div className="text-center">
+              <img
+                src={nepaltruck}
+                alt="Nepali Truck"
+                className="w-full rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 object-contain"
+              />
+              <p className="mt-3 text-gray-700">
+                Our operation of BULK Cargo from ICD dries Port, Birgunj for
+                various destinations in Nepal.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <img
+                src={hilltruck}
+                alt="Nepal Hill Transport"
+                className="w-full rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 object-contain"
+              />
+              <p className="mt-3 text-gray-700">
+                Sea Sky Cargo Service transporting a Heavy Duty machinery for
+                project in Nepal and all roads in Hilly region (project areas).
+              </p>
+            </div>
+
+            <div className="text-center">
+              <img
+                src={bhutan}
+                alt="Bhutan Truck"
+                className="w-full rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 object-contain"
+              />
+              <p className="mt-3 text-gray-700">
+                Sea Sky Cargo Service is transporting excavator in Bhutan for
+                the project. The road in Bhutan and Nepal are almost the same.
+              </p>
+            </div>
           </div>
         </div>
 
