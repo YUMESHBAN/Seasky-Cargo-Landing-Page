@@ -59,7 +59,7 @@ export default function Navbar() {
       ],
     },
     { name: "CSR", href: "/csr" },
-    { name: "Career", href: "#" },
+    { name: "Career", href: "/career" },
     { name: "Gallery", href: "#" },
     { name: "Blogs", href: "#" },
   ];
