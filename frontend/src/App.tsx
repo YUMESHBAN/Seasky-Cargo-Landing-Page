@@ -6,9 +6,12 @@ import Home from "./pages/home";
 import AirFreight from "./pages/services/Airfreight";
 import SeaFreight from "./pages/services/Seafreight";
 import LandTransport from "./pages/services/Landtransport";
+
 import Incoterms from "./pages/resources/incoterms";
 import Containersize from "./pages/resources/containersize";
 import AirContainer from "./pages/resources/airfreightcontainer";
+
+import CSR from "./pages/csr";
 
 export default function App() {
   return (
@@ -21,8 +24,8 @@ export default function App() {
         {/* Middle Content (changes with route) */}
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} /> {/* Default Home */}
-            <Route path="/about" element={<About />} /> {/* About Page */}
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/services/air-freight" element={<AirFreight />} />
             <Route path="/services/sea-freight" element={<SeaFreight />} />
             <Route
@@ -38,6 +41,8 @@ export default function App() {
               path="/resources/airfreightcontainer"
               element={<AirContainer />}
             />
+
+            <Route path="/csr" element={<CSR />} />
           </Routes>
         </main>
 
