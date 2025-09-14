@@ -12,6 +12,7 @@ import Containersize from "./pages/resources/containersize";
 import AirContainer from "./pages/resources/airfreightcontainer";
 
 import CSR from "./pages/csr";
+import Career from "./pages/career";
 
 export default function App() {
   return (
@@ -43,6 +44,7 @@ export default function App() {
             />
 
             <Route path="/csr" element={<CSR />} />
+            <Route path="/career" element={<Career />} />
           </Routes>
         </main>
 
