@@ -6,7 +6,7 @@ export default function airfreightcontainer() {
       <div className="relative w-full h-[50vh] overflow-hidden">
         <img
           src={contract}
-          alt="Air Freight"
+          alt="Contract"
           className="absolute inset-0 w-full h-full object-cover object-[center_70%] -z-10"
           loading="lazy"
         />
