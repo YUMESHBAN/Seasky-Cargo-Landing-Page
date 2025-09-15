@@ -13,6 +13,8 @@ import AirContainer from "./pages/resources/airfreightcontainer";
 
 import CSR from "./pages/csr";
 import Career from "./pages/career";
+import Gallery from "./pages/gallery";
+import Blogs from "./pages/blogs";
 
 export default function App() {
   return (
@@ -45,6 +47,8 @@ export default function App() {
 
             <Route path="/csr" element={<CSR />} />
             <Route path="/career" element={<Career />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/blogs" element={<Blogs />} />
           </Routes>
         </main>
 
