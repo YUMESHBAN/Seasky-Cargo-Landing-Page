@@ -15,6 +15,7 @@ import CSR from "./pages/csr";
 import Career from "./pages/career";
 import Gallery from "./pages/gallery";
 import Blogs from "./pages/blogs";
+import GetAQuote from "./pages/getaquote";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/getaquote" element={<GetAQuote />} />
             <Route path="/services/air-freight" element={<AirFreight />} />
             <Route path="/services/sea-freight" element={<SeaFreight />} />
             <Route

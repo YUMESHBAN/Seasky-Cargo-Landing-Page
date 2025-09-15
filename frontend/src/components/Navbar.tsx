@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
+import GetAQuoteOverlay from "../pages/getaquote";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -131,10 +133,9 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Right side: Get a Quote */}
-        <button className="bg-[#495cb5] text-white px-4 py-2 rounded-lg hover:opacity-90 transition text-sm md:text-base">
-          Get a Quote
-        </button>
+        <div className="flex  ">
+          <GetAQuoteOverlay />
+        </div>
       </div>
 
       {/* Mobile dropdown */}
