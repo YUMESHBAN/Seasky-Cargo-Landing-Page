@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo.svg";
-import { Link } from "react-router-dom";
+
 import GetAQuoteOverlay from "../pages/getaquote";
 
 export default function Navbar() {
